@@ -2,7 +2,87 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<style>
+    .hero {
+        background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -20px;
+    }
+
+    .glowing-text {
+        color: #ffffff;
+        text-shadow: 0 0 10px rgba(100, 180, 255, 0.8),
+                     0 0 20px rgba(100, 180, 255, 0.5),
+                     0 0 40px rgba(100, 180, 255, 0.3);
+        font-size: 5rem;
+        font-weight: 800;
+        letter-spacing: 4px;
+    }
+
+    .subtitle {
+        color: #a0c4e8;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+    }
+
+    .subtitle a {
+        color: #64b4ff;
+        text-decoration: none;
+        border-bottom: 1px solid #64b4ff;
+        transition: color 0.3s ease;
+    }
+
+    .subtitle a:hover {
+        color: #ffffff;
+        border-bottom-color: #ffffff;
+    }
+
+    .dot {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #64b4ff;
+        margin: 0 4px;
+        animation: bounce 1.2s infinite ease-in-out;
+    }
+
+    .dot:nth-child(2) { animation-delay: 0.2s; }
+    .dot:nth-child(3) { animation-delay: 0.4s; }
+
+    /* @@keyframes bounce {
+        0%, 100% { transform: translateY(0); opacity: 0.5; }
+        50% { transform: translateY(-10px); opacity: 1; }
+    } */
+
+    .divider {
+        width: 80px;
+        height: 3px;
+        background: linear-gradient(to right, #64b4ff, #a0c4e8);
+        margin: 20px auto;
+        border-radius: 10px;
+    }
+</style>
+
+<div class="hero">
+    <div class="text-center">
+
+        <div class="mb-3">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+        <h1 class="glowing-text">HelloWorld</h1>
+
+        <div class="divider"></div>
+
+        <p class="subtitle mt-3">
+            Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.
+        </p>
+
+    </div>
 </div>
